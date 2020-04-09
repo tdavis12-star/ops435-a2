@@ -1,0 +1,40 @@
+Below demonstrates how the python program ur.py will work:
+
+1. The usage of the user and host option by using the -l option with a file name;
+
+A.  User or host option will only be accepted by using the -l argument. To check if there is any error 
+    (file not found or permission error), the program will first  try to open the file with read permission .
+
+B.  Then the readline() function will be used to read a line, split() function will be used to split the line which 
+    depends on the user or host selection from the input. This input will save the first or third element into a new list.
+
+C. It will check each time if that user or host was already in the list, if so a new line will be processed 
+    within the file. If not then the new user or host will be added to the list. At the end of the file a list
+    will be returned and the final output will be printed as long -l argument was used.
+
+2. Below will show the daily or weekly options regarding the file name and the -r argument usage;
+
+ A. An IP4 address will be accepted by input using the -r option and it's validity will be determined by using a check 
+   function.To check if there is any error (file not found or permission error), the program will first  try to open 
+   the file with read permission .
+
+
+ B. Then the readline() function will be used to read a line, split() function will be used to split the line which depends
+    on the IPv4 address entered from the input. This will check if the third element matches the user input and a new line will 
+    be processed within file if they do not.
+
+
+ C. If they match, the fifth to ninth element will be joined to one object using the " " character regarding the login time.The
+    eleventh to fifteenth element will do the same but it deals with the exit time of logon.
+ 
+ D. These will be used in Epoch time to get the difference of two numbers in seconds. Then save login time as key, difference
+    as value, in to a dictionary. If -t is daily option, then display output by using dictionary, if weekly option, depend on the 
+    Key of dictionary, add values up per week. Save the values in to another dictionary. Date of first day of the week as Key 
+    (should be a Monday), total of second add-up login time as values, display output depend on dictionary.
+
+    If they match, the fifth to ninth element will be joined to one object using the " " character regarding the login time.
+    The eleventh to fifteenth element will do the same but it deals with the exit time of logon. 
+
+3. If detect -h or --help, display usage message
+4. If argument list did not detect any useful argument, or too many argument, display usage.
+
